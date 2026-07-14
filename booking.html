@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reserve a table at Gion Asakura — Italian restaurant in Gion, Kyoto.">
+  <title>Reserve · Gion Asakura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header scrolled" id="header">
+    <nav class="nav">
+      <a href="landing.html" class="logo">
+        <span class="logo-main">Gion Asakura</span>
+        <span class="logo-sub">Italian · Kyoto</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="book-main">
+    <a class="book-back" id="backLink" href="landing.html">← <span data-i18n="back">Back to site</span></a>
+    <span class="eyebrow" data-i18n="eyebrow">Reservation</span>
+    <h1 data-i18n="title">Reserve a table</h1>
+    <p class="lead" data-i18n="intro">Send us your request via WhatsApp — we'll confirm availability and get back to you.</p>
+
+    <div class="book-card">
+      <div class="field-row">
+        <div class="field">
+          <label data-i18n="date">Date</label>
+          <input type="date" id="f-date">
+        </div>
+        <div class="field">
+          <label data-i18n="time">Time</label>
+          <select id="f-time">
+            <option>17:30</option><option>18:00</option><option>18:30</option>
+            <option>19:00</option><option>19:30</option><option>20:00</option>
+            <option>20:30</option><option>21:00</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label data-i18n="guests">Guests</label>
+          <select id="f-guests">
+            <option>1</option><option>2</option><option>3</option><option>4</option>
+            <option>5</option><option>6</option><option>7</option><option>8</option>
+            <option data-i18n="guests8">8+ (please note below)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label data-i18n="name">Name</label>
+          <input type="text" id="f-name" autocomplete="name">
+        </div>
+      </div>
+      <div class="field">
+        <label data-i18n="notes">Notes (seating, allergies, occasion…)</label>
+        <textarea id="f-notes"></textarea>
+      </div>
+
+      <div class="book-summary" id="summary"></div>
+
+      <button class="btn btn-wa" id="submit" style="width:100%;justify-content:center">
+        <span data-i18n="submit">Send via WhatsApp</span>
+      </button>
+      <p class="menu-note" style="margin-top:14px" data-i18n="foot">Times are requests and subject to confirmation. For same-day reservations please call +81 75-561-3828.</p>
+    </div>
+  </main>
+
+  <script>
+  (function () {
+    var WA = "85290744644";
+    var params = new URLSearchParams(location.search);
+    var lang = (params.get("lang") || "en").toLowerCase();
+    if (["en","jp","cn"].indexOf(lang) === -1) lang = "en";
+
+    var I18N = {
+      en: { back:"Back to site", eyebrow:"Reservation", title:"Reserve a table",
+        intro:"Send us your request via WhatsApp — we'll confirm availability and get back to you.",
+        date:"Date", time:"Time", guests:"Guests", guests8:"8+ (please note below)",
+        name:"Name", notes:"Notes (seating, allergies, occasion…)", submit:"Send via WhatsApp",
+        foot:"Times are requests and subject to confirmation. For same-day reservations please call +81 75-561-3828.",
+        sumTitle:"Your request", sDate:"Date", sTime:"Time", sGuests:"Guests", sName:"Name", sNotes:"Notes", none:"—",
+        msgHead:"Reservation request — Gion Asakura", htmlLang:"en" },
+      jp: { back:"サイトに戻る", eyebrow:"ご予約", title:"ご予約",
+        intro:"WhatsApp で予約リクエストをお送りください。空席を確認のうえご連絡いたします。",
+        date:"ご希望日", time:"ご希望時間", guests:"人数", guests8:"8名以上（下記にご記入ください）",
+        name:"お名前", notes:"ご要望（席・アレルギー・記念日など）", submit:"WhatsApp で送信",
+        foot:"時間はリクエストとなり、確定は別途ご連絡いたします。当日のご予約はお電話（075-561-3828）にてお願いします。",
+        sumTitle:"ご予約内容", sDate:"ご希望日", sTime:"ご希望時間", sGuests:"人数", sName:"お名前", sNotes:"ご要望", none:"—",
+        msgHead:"予約リクエスト — 祇園あさくら", htmlLang:"ja" },
+      cn: { back:"返回网站", eyebrow:"预约", title:"预约餐位",
+        intro:"通过 WhatsApp 发送预约请求，我们将确认空位后尽快回复您。",
+        date:"日期", time:"时间", guests:"人数", guests8:"8 人以上（请在下方备注）",
+        name:"姓名", notes:"备注（座位、过敏、纪念日等）", submit:"通过 WhatsApp 发送",
+        foot:"所填时间为预约请求，最终以本店确认为准。当日预约请致电 +81 75-561-3828。",
+        sumTitle:"预约内容", sDate:"日期", sTime:"时间", sGuests:"人数", sName:"姓名", sNotes:"备注", none:"—",
+        msgHead:"预约请求 — 祇園あさくら", htmlLang:"zh-CN" }
+    };
+    var t = I18N[lang];
+
+    document.documentElement.lang = t.htmlLang;
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var k = el.getAttribute("data-i18n");
+      if (t[k]) el.textContent = t[k];
+    });
+    document.getElementById("backLink").setAttribute("href", lang + "/index.html");
+
+    var elDate = document.getElementById("f-date"),
+        elTime = document.getElementById("f-time"),
+        elGuests = document.getElementById("f-guests"),
+        elName = document.getElementById("f-name"),
+        elNotes = document.getElementById("f-notes"),
+        summary = document.getElementById("summary");
+
+    function renderSummary() {
+      var rows = [
+        ["sumTitle", "", true],
+        ["sDate", elDate.value || t.none],
+        ["sTime", elTime.value || t.none],
+        ["sGuests", elGuests.value || t.none],
+        ["sName", elName.value || t.none],
+        ["sNotes", elNotes.value || t.none]
+      ];
+      var html = "";
+      rows.forEach(function (r) {
+        if (r[2]) { html += "<strong>" + t[r[0]] + "</strong><br>"; }
+        else { html += t[r[0]] + ": " + escapeHtml(r[1]) + "<br>"; }
+      });
+      summary.innerHTML = html;
+    }
+    function escapeHtml(s){return String(s).replace(/[&<>]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c];});}
+
+    [elDate, elTime, elGuests, elName, elNotes].forEach(function (el) {
+      el.addEventListener("input", renderSummary);
+      el.addEventListener("change", renderSummary);
+    });
+    renderSummary();
+
+    document.getElementById("submit").addEventListener("click", function () {
+      var lines = [
+        t.msgHead,
+        t.sDate + ": " + (elDate.value || t.none),
+        t.sTime + ": " + (elTime.value || t.none),
+        t.sGuests + ": " + (elGuests.value || t.none),
+        t.sName + ": " + (elName.value || t.none),
+        t.sNotes + ": " + (elNotes.value || t.none)
+      ];
+      var text = encodeURIComponent(lines.join("\n"));
+      window.open("https://api.whatsapp.com/send?phone=" + WA + "&text=" + text, "_blank");
+    });
+  })();
+  </script>
+</body>
+</html>

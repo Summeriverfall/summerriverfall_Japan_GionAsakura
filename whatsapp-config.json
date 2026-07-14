@@ -1,0 +1,14 @@
+{
+  "shop": "Gion Asakura / 祇園あさくら",
+  "type": "Italian restaurant",
+  "whatsappNumber": "85290744644",
+  "phone": "+81 75-561-3828",
+  "address": "317 Furunishicho, Higashiyama Ward, Kyoto 605-0065",
+  "hours": "Dinner from 17:30 (reservations recommended)",
+  "map": {
+    "cid": "3698002281516441157",
+    "ftid": "0x600108c224c5f195:0x3351f17b705f1e45",
+    "coords": "35.0072074,135.7766391"
+  },
+  "note": "WhatsApp number is hardcoded in booking.html; this file is for reference."
+}
