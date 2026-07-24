@@ -3,164 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="祇園あさくら — 京都东山、邻近祇园的小型意式餐厅。手打意面与时令意式料理。晚市 17:30 起，建议提前预约。">
-  <title>祇園あさくら | 京都祇园意式餐厅</title>
+  <title>祇園あさくら · 京都祇园意式餐厅</title>
+  <meta name="description" content="祇園あさくら — 京都东山、邻近祇园的小型意式餐厅。手打意面与时令意式料理。晚市 17:30 起。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <header class="header" id="header">
-    <nav class="nav">
-      <a href="../landing.html" class="logo">
-        <span class="logo-main">Gion Asakura</span>
-        <span class="logo-sub">Italian · Kyoto</span>
-      </a>
-      <ul class="nav-menu">
-        <li><a href="#concept">理念</a></li>
-        <li><a href="#menu">菜单</a></li>
-        <li><a href="#gallery">图集</a></li>
-        <li><a href="#visit">位置</a></li>
-        <li class="lang-links"><a href="../en/index.html">EN</a><span>/</span><a href="../jp/index.html">日本語</a><span>/</span><a class="active">中文</a></li>
-        <li><a href="../booking.html?lang=cn" class="nav-cta">预约</a></li>
+  <header class="site-header is-hero-light">
+    <div class="header-inner">
+      <a href="index.html" class="logo">祇園あさくら</a>
+      <button type="button" class="menu-btn" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav">
+        <li><a href="#products">菜单</a></li>
+        <li><a href="#gallery">环境</a></li>
+        <li><a href="#location">位置</a></li>
+        <li class="lang"><a href="../en/index.html">EN</a><span>&middot;</span><a href="../jp/index.html">JP</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
-    </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-bg" style="background-image:url('../assets/images/hero-1.webp')"></div>
+  <section class="hero" style="background-image: url('../assets/images/hero.webp');">
     <div class="hero-inner">
-      <span class="eyebrow">Italian Kitchen · 京都 祇园</span>
-      <h1>Gion Asakura</h1>
-      <span class="jp-name">祇園あさくら</span>
-      <p class="hero-tag">手打意面与时令意式料理，佐以京都特有的静谧。</p>
-      <div class="hero-actions">
-        <a href="../booking.html?lang=cn" class="btn btn-primary">立即预约</a>
-        <a href="#menu" class="btn btn-ghost">查看菜单</a>
-      </div>
-      <div class="hero-meta">
-        <span><i class="fa">◆</i> 意式料理</span>
-        <span><i class="fa">◆</i> 京都 东山</span>
-        <span><i class="fa">◆</i> 晚市 17:30 起</span>
+      <p class="hero-kicker">Italian Cuisine &amp; Wine · 京都 祇园</p>
+      <h1>祇園あさくら</h1>
+      <p class="hero-lead">手打意面与时令意式料理，佐以京都特有的静谧。晚市 17:30 起。</p>
+      <div class="hero-cta">
+        <button type="button" class="btn btn--light js-booking-trigger">booking</button>
       </div>
     </div>
   </section>
 
-  <section class="section" id="concept">
-    <div class="wrap">
-      <div class="concept-grid">
-        <div class="concept-copy reveal">
-          <span class="eyebrow">关于本店</span>
-          <div class="section-head" style="margin-bottom:24px"><h2>东山巷弄里的<br>小小意式餐厅</h2></div>
-          <p>祇園あさくら坐落在京都东山、距祇园仅数步之遥的静谧一角，是一家意式技法与日本食材相遇的小餐厅。手打意面与时令菜肴以简约手法呈现，再以京都特有的克制收尾。</p>
-          <p>座位不多，节奏舒缓。一道一道，一杯一杯，愿您在此从容地度过整个夜晚。</p>
-          <p class="sig">欢迎来到祇园。</p>
-        </div>
-        <div class="concept-media reveal">
-          <img src="../assets/images/dish-06.webp" alt="祇園あさくら 的时令菜肴">
-          <span class="frame"></span>
-        </div>
-      </div>
+  <div class="band">
+    <div class="band__media" style="background-image: url('../assets/images/dishes-spread.webp');" role="img" aria-label="时令意式料理"></div>
+    <div class="band__text">
+      <p class="section-label">Concept</p>
+      <h2>东山巷弄里的小小意式餐厅</h2>
+      <p>祇園あさくら坐落在京都东山、距祇园仅数步之遥的静谧一角。意式技法与日本食材在吧台对面相遇；座位不多，节奏舒缓，愿您一道一道、一杯一杯地度过夜晚。</p>
     </div>
-  </section>
+  </div>
 
-  <section class="section bg-2" id="menu">
-    <div class="wrap">
-      <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
-        <span class="eyebrow">菜单</span>
-        <h2>意面</h2>
-        <p class="muted">现点现做的手打意面。价格均为含税价。</p>
+  <section id="products" class="section section--tight-top">
+    <div class="container">
+      <p class="section-label">Menu</p>
+      <h2>意面与料理</h2>
+      <p class="section-intro">现点现做的手打意面，另备前菜与时令主菜。价格均为含税价。</p>
+      <div class="editorial-list">
+        <article class="editorial-item">
+          <div class="editorial-media">
+            <img src="../assets/images/dishes-spread.webp" alt="时令意面与意式料理">
+          </div>
+          <div class="editorial-copy">
+            <p class="editorial-kicker">招牌</p>
+            <h3>Pasta · 手打意面</h3>
+            <p>从大蒜橄榄油到海胆奶油 —— 以简约手法呈现，再以京都的克制收尾。</p>
+            <div class="editorial-thumbs">
+              <img src="../assets/images/antipasti.webp" alt="前菜细节">
+              <img src="../assets/images/food-collage.webp" alt="厨房出品">
+              <img src="../assets/images/interior-setting.webp" alt="吧台席位">
+            </div>
+          </div>
+        </article>
+
+        <article class="editorial-item editorial-item--reverse">
+          <div class="editorial-media">
+            <img src="../assets/images/antipasti.webp" alt="前菜拼盘">
+          </div>
+          <div class="editorial-copy">
+            <p class="editorial-kicker">单点</p>
+            <h3>前菜 · 肉类与鱼类</h3>
+            <p>小盘前菜、烤时蔬与时令肉鱼料理 —— 完整菜单请询问店内工作人员。</p>
+            <div class="editorial-thumbs">
+              <img src="../assets/images/window-noren.webp" alt="意式料理与葡萄酒">
+              <img src="../assets/images/exterior-entrance.webp" alt="店面入口">
+              <img src="../assets/images/interior-counter.webp" alt="开放式厨房">
+            </div>
+          </div>
+        </article>
       </div>
-      <div class="menu-wrap reveal">
-        <div class="menu-item"><div class="mi-name">国产大蒜香辣橄榄油意面<small>国産にんにくのペペロンチーノ</small></div><span class="mi-dots"></span><span class="mi-price">¥1,200</span></div>
-        <div class="menu-item"><div class="mi-name">高甜度番茄与罗勒冷制意面<small>高糖度トマトとバジルの冷製</small></div><span class="mi-dots"></span><span class="mi-price">¥2,000</span></div>
-        <div class="menu-item"><div class="mi-name">微辣番茄酱阿拉比亚塔<small>ピリ辛トマトソースのアラビアータ</small></div><span class="mi-dots"></span><span class="mi-price">¥2,000</span></div>
-        <div class="menu-item"><div class="mi-name">高甜度番茄罗勒酱意面<small>高糖度トマトとバジルのソース</small></div><span class="mi-dots"></span><span class="mi-price">¥2,000</span></div>
-        <div class="menu-item"><div class="mi-name">水牛马苏里拉与番茄<small>水牛モッツァレラチーズとトマト</small></div><span class="mi-dots"></span><span class="mi-price">¥2,500</span></div>
-        <div class="menu-item"><div class="mi-name">香肠番茄洋葱阿玛特里切安纳<small>ソーセージ、トマト、オニオンのアマトリチャーナ</small></div><span class="mi-dots"></span><span class="mi-price">¥2,500</span></div>
-        <div class="menu-item"><div class="mi-name">辛子明太子与鲜虾<small>辛子明太子と海老</small></div><span class="mi-dots"></span><span class="mi-price">¥2,160</span></div>
-        <div class="menu-item"><div class="mi-name">鲜虾西兰花番茄奶油意面<small>海老とブロッコリーのトマトクリームソース</small></div><span class="mi-dots"></span><span class="mi-price">¥2,800</span></div>
-        <div class="menu-item"><div class="mi-name">戈贡佐拉芝士酱<small>ゴルゴンゾーラソース</small></div><span class="mi-dots"></span><span class="mi-price">¥2,500</span></div>
-        <div class="menu-item"><div class="mi-name">满满海胆奶油意面<small>たっぷりウニのクリームパスタ</small></div><span class="mi-dots"></span><span class="mi-price">¥5,900</span></div>
+
+      <div class="menu-list">
+        <div class="menu-row"><div class="menu-row__name">国产大蒜香辣橄榄油意面<small>国産にんにくのペペロンチーノ</small></div><span class="menu-row__price">¥1,200</span></div>
+        <div class="menu-row"><div class="menu-row__name">高甜度番茄与罗勒冷制意面<small>高糖度トマトとバジルの冷製</small></div><span class="menu-row__price">¥2,000</span></div>
+        <div class="menu-row"><div class="menu-row__name">微辣番茄酱阿拉比亚塔<small>ピリ辛トマトソースのアラビアータ</small></div><span class="menu-row__price">¥2,000</span></div>
+        <div class="menu-row"><div class="menu-row__name">高甜度番茄罗勒酱意面<small>高糖度トマトとバジルのソース</small></div><span class="menu-row__price">¥2,000</span></div>
+        <div class="menu-row"><div class="menu-row__name">水牛马苏里拉与番茄<small>水牛モッツァレラチーズとトマト</small></div><span class="menu-row__price">¥2,500</span></div>
+        <div class="menu-row"><div class="menu-row__name">香肠番茄洋葱阿玛特里切安纳<small>ソーセージ、トマト、オニオンのアマトリチャーナ</small></div><span class="menu-row__price">¥2,500</span></div>
+        <div class="menu-row"><div class="menu-row__name">辛子明太子与鲜虾<small>辛子明太子と海老</small></div><span class="menu-row__price">¥2,160</span></div>
+        <div class="menu-row"><div class="menu-row__name">鲜虾西兰花番茄奶油意面<small>海老とブロッコリーのトマトクリームソース</small></div><span class="menu-row__price">¥2,800</span></div>
+        <div class="menu-row"><div class="menu-row__name">戈贡佐拉芝士酱<small>ゴルゴンゾーラソース</small></div><span class="menu-row__price">¥2,500</span></div>
+        <div class="menu-row"><div class="menu-row__name">满满海胆奶油意面<small>たっぷりウニのクリームパスタ</small></div><span class="menu-row__price">¥5,900</span></div>
       </div>
       <p class="menu-note">另备有前菜、肉类与鱼类料理及甜点，详情请询问店内工作人员。</p>
-    </div>
-  </section>
 
-  <section class="section" id="gallery">
-    <div class="wrap">
-      <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
-        <span class="eyebrow">图集</span>
-        <h2>来自厨房</h2>
-      </div>
-      <div class="gallery reveal">
-        <a href="../assets/images/hero-1.webp" class="tall"><img src="../assets/images/hero-1.webp" alt="阿玛特里切安纳意面"></a>
-        <a href="../assets/images/dish-01.webp"><img src="../assets/images/dish-01.webp" alt="牛肉与烤芦笋"></a>
-        <a href="../assets/images/dish-02.webp"><img src="../assets/images/dish-02.webp" alt="番茄布鲁斯凯塔"></a>
-        <a href="../assets/images/dish-03.webp"><img src="../assets/images/dish-03.webp" alt="三文鱼生"></a>
-        <a href="../assets/images/dish-04.webp"><img src="../assets/images/dish-04.webp" alt="黑椒芝士意面"></a>
-        <a href="../assets/images/dish-07.webp"><img src="../assets/images/dish-07.webp" alt="烤芝士与白芦笋"></a>
-        <a href="../assets/images/dish-08.webp"><img src="../assets/images/dish-08.webp" alt="意式炸物"></a>
-        <a href="../assets/images/dish-09.webp"><img src="../assets/images/dish-09.webp" alt="鱼生拼盘"></a>
-        <a href="../assets/images/dish-05.webp"><img src="../assets/images/dish-05.webp" alt="生火腿拼盘"></a>
-        <a href="../assets/images/dish-11.webp"><img src="../assets/images/dish-11.webp" alt="法式焗蜗牛"></a>
-        <a href="../assets/images/dish-10.webp"><img src="../assets/images/dish-10.webp" alt="可乐饼"></a>
-        <a href="../assets/images/hero-2.webp"><img src="../assets/images/hero-2.webp" alt="炸肉饼配奶油酱"></a>
+      <div class="products-cta">
+        <button type="button" class="btn btn--dark js-booking-trigger">booking</button>
       </div>
     </div>
   </section>
 
-  <section class="section bg-2" id="visit">
-    <div class="wrap">
-      <div class="visit-grid">
-        <div class="visit-info reveal">
-          <span class="eyebrow">位置</span>
-          <h2>在祇园恭候您</h2>
-          <div class="visit-item">
-            <h4>地址</h4>
-            <p><a href="https://www.google.com/maps?cid=3698002281516441157" target="_blank" rel="noopener noreferrer">〒605-0065<br>京都市东山区古西町317</a></p>
-          </div>
-          <div class="visit-item">
-            <h4>营业时间</h4>
+  <section id="gallery" class="section">
+    <div class="container">
+      <p class="section-label">Space</p>
+      <h2>店内与巷弄</h2>
+      <p class="section-intro">面对开放式厨房的亲密吧台，藏在祇园附近东山的静谧小巷里。</p>
+      <div class="space-story">
+        <div class="space-main">
+          <img src="../assets/images/interior-counter.webp" alt="吧台席位与开放式厨房">
+        </div>
+        <div class="space-copy">
+          <p>温暖木作、聚焦灯光与主厨吧台 —— 夜晚在此从容停留。</p>
+          <p>顺着标有「祇園あさくら」的窄巷前行，距祇园仅数步之遥。</p>
+        </div>
+        <div class="space-strip">
+          <img src="../assets/images/exterior-entrance.webp" alt="店面入口">
+          <img src="../assets/images/alley-sign.webp" alt="巷弄导览牌">
+          <img src="../assets/images/window-noren.webp" alt="葡萄酒暖帘">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="location" class="section">
+    <div class="container">
+      <p class="section-label">Visit</p>
+      <h2>位置</h2>
+      <p class="section-intro">京都 东山 · 建议提前预约。</p>
+      <div class="location-wrap">
+        <div class="location-info">
+          <h3>祇園あさくら</h3>
+          <p class="address">〒605-0065 京都市东山区古西町317</p>
+          <div class="hours-block">
+            <p><strong>营业时间</strong></p>
             <p>晚市 17:30 起 · 建议提前预约</p>
           </div>
-          <div class="visit-item">
-            <h4>电话</h4>
-            <p><a href="tel:+81755613828">+81 75-561-3828</a></p>
+          <p class="phone"><strong>电话：</strong> <a href="tel:+81755613828">075-561-3828</a></p>
+          <div class="tags">
+            <span class="tag">堂食</span>
+            <span class="tag">外带</span>
+            <span class="tag">外送</span>
           </div>
-          <div class="visit-item">
-            <h4>服务</h4>
-            <p>堂食 · 外带 · 外送</p>
-          </div>
-          <div class="visit-actions">
-            <a href="../booking.html?lang=cn" class="btn btn-primary">立即预约</a>
-            <a href="https://www.google.com/maps?cid=3698002281516441157" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">在 Google 地图打开</a>
+          <div class="location-actions">
+            <a href="https://www.google.com/maps?cid=3698002281516441157" target="_blank" rel="noopener noreferrer" class="btn btn--dark">Google 地图</a>
+            <button type="button" class="btn btn--dark js-booking-trigger">booking</button>
           </div>
         </div>
-        <div class="visit-map reveal">
-          <iframe title="祇園あさくら 地图" src="https://maps.google.com/maps?q=Gion%20Asakura&ftid=0x600108c224c5f195:0x3351f17b705f1e45&z=17&output=embed" style="border:0;pointer-events:none;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <a href="https://www.google.com/maps?cid=3698002281516441157" target="_blank" rel="noopener noreferrer" class="visit-map-link" aria-label="在 Google 地图打开 Gion Asakura" style="position:absolute;inset:0;z-index:2;"></a>
+        <div class="map-container">
+          <iframe title="祇園あさくら 地图" src="https://maps.google.com/maps?q=Gion%20Asakura&ftid=0x600108c224c5f195:0x3351f17b705f1e45&z=17&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer-in">
-        <div class="f-name">Gion Asakura<small>Italian · Kyoto</small></div>
-        <div class="footer-links">
-          <a href="#concept">理念</a>
-          <a href="#menu">菜单</a>
-          <a href="#visit">位置</a>
-          <a href="../booking.html?lang=cn">预约</a>
-        </div>
-      </div>
-      <p class="footer-copy">© 2026 祇園あさくら · 京都市东山区古西町317 · Powered by <a href="https://reserveinjp.com/" target="_blank" rel="noopener">reserveinjp.</a></p>
-    </div>
+  <footer class="site-footer">
+    <p>&copy; Gion Asakura 祇園あさくら &middot; <a href="../en/index.html">EN</a> / <a href="../jp/index.html">日本語</a></p>
+    <p class="powered-by"><a href="https://reserveinjp.com/" target="_blank" rel="noopener noreferrer" aria-label="reserveinjp">powered by reserveinjp</a></p>
   </footer>
+
+  <div id="booking-modal" class="booking-modal" hidden>
+    <div class="booking-modal__backdrop" data-booking-close></div>
+    <div class="booking-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+      <button type="button" class="booking-modal__close" aria-label="关闭预约弹窗" data-booking-close>&times;</button>
+      <h3 id="booking-modal-title">booking</h3>
+      <div class="booking-modal__actions">
+        <a href="../booking.html?lang=cn">在线预约表单</a>
+        <a href="https://api.whatsapp.com/send/?phone=85290744644&text=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E9%A2%84%E7%BA%A6%20%E7%A5%87%E5%9C%92%E3%81%82%E3%81%95%E3%81%8F%E3%82%89%20%2F%20Gion%20Asakura%E3%80%82%E4%BA%BA%E6%95%B0%20__%20%E4%BA%BA%EF%BC%8C%E5%B8%8C%E6%9C%9B%E6%97%A5%E6%9C%9F%20__%20%EF%BC%8C%E6%97%B6%E9%97%B4%20__%20%E3%80%82" target="_blank" rel="noopener noreferrer">WhatsApp 预约</a>
+        <a href="tel:+81755613828">电话预约</a>
+      </div>
+    </div>
+  </div>
 
   <script src="../script.js"></script>
 </body>

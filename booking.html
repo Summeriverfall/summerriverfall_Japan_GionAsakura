@@ -7,24 +7,21 @@
   <title>Reserve · Gion Asakura</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="header scrolled" id="header">
-    <nav class="nav">
-      <a href="landing.html" class="logo">
-        <span class="logo-main">Gion Asakura</span>
-        <span class="logo-sub">Italian · Kyoto</span>
-      </a>
-    </nav>
+<body class="book-page">
+  <header class="site-header is-solid">
+    <div class="header-inner">
+      <a href="en/index.html" class="logo" id="logoLink">Gion Asakura</a>
+    </div>
   </header>
 
-  <main class="book-main">
-    <a class="book-back" id="backLink" href="landing.html">← <span data-i18n="back">Back</span></a>
-    <span class="eyebrow" data-i18n="eyebrow">Reservation</span>
+  <main class="book-wrap">
+    <a class="book-back" id="backLink" href="en/index.html">← <span data-i18n="back">Back</span></a>
+    <p class="section-label" data-i18n="eyebrow">Reservation</p>
     <h1 data-i18n="title">Reserve a table</h1>
-    <p class="lead" data-i18n="intro">Send us your request via WhatsApp — we'll confirm availability and get back to you.</p>
+    <p class="book-lead" data-i18n="intro">Send us your request via WhatsApp — we'll confirm availability and get back to you.</p>
 
     <div class="book-card">
       <div class="field-row">
@@ -62,10 +59,10 @@
 
       <div class="book-summary" id="summary"></div>
 
-      <button class="btn btn-wa" id="submit" style="width:100%;justify-content:center">
+      <button type="button" class="btn btn--dark" id="submit" style="width:100%">
         <span data-i18n="submit">Send via WhatsApp</span>
       </button>
-      <p class="menu-note" style="margin-top:14px" data-i18n="foot">Times are requests and subject to confirmation. For same-day reservations please call +81 75-561-3828.</p>
+      <p class="menu-note" data-i18n="foot">Times are requests and subject to confirmation. For same-day reservations please call +81 75-561-3828.</p>
     </div>
   </main>
 
@@ -83,21 +80,21 @@
         name:"Name", notes:"Notes (seating, allergies, occasion…)", submit:"Send via WhatsApp",
         foot:"Times are requests and subject to confirmation. For same-day reservations please call +81 75-561-3828.",
         sumTitle:"Your request", sDate:"Date", sTime:"Time", sGuests:"Guests", sName:"Name", sNotes:"Notes", none:"—",
-        msgHead:"Reservation request — Gion Asakura", htmlLang:"en" },
+        msgHead:"Reservation request — Gion Asakura", htmlLang:"en", logo:"Gion Asakura" },
       jp: { back:"戻る", eyebrow:"ご予約", title:"ご予約",
         intro:"WhatsApp で予約リクエストをお送りください。空席を確認のうえご連絡いたします。",
         date:"ご希望日", time:"ご希望時間", guests:"人数", guests8:"8名以上（下記にご記入ください）",
         name:"お名前", notes:"ご要望（席・アレルギー・記念日など）", submit:"WhatsApp で送信",
         foot:"時間はリクエストとなり、確定は別途ご連絡いたします。当日のご予約はお電話（075-561-3828）にてお願いします。",
         sumTitle:"ご予約内容", sDate:"ご希望日", sTime:"ご希望時間", sGuests:"人数", sName:"お名前", sNotes:"ご要望", none:"—",
-        msgHead:"予約リクエスト — 祇園あさくら", htmlLang:"ja" },
+        msgHead:"予約リクエスト — 祇園あさくら", htmlLang:"ja", logo:"祇園あさくら" },
       cn: { back:"返回", eyebrow:"预约", title:"预约餐位",
         intro:"通过 WhatsApp 发送预约请求，我们将确认空位后尽快回复您。",
         date:"日期", time:"时间", guests:"人数", guests8:"8 人以上（请在下方备注）",
         name:"姓名", notes:"备注（座位、过敏、纪念日等）", submit:"通过 WhatsApp 发送",
         foot:"所填时间为预约请求，最终以本店确认为准。当日预约请致电 +81 75-561-3828。",
         sumTitle:"预约内容", sDate:"日期", sTime:"时间", sGuests:"人数", sName:"姓名", sNotes:"备注", none:"—",
-        msgHead:"预约请求 — 祇園あさくら", htmlLang:"zh-CN" }
+        msgHead:"预约请求 — 祇園あさくら", htmlLang:"zh-CN", logo:"祇園あさくら" }
     };
     var t = I18N[lang];
 
@@ -107,6 +104,8 @@
       if (t[k]) el.textContent = t[k];
     });
     document.getElementById("backLink").setAttribute("href", lang + "/index.html");
+    document.getElementById("logoLink").setAttribute("href", lang + "/index.html");
+    document.getElementById("logoLink").textContent = t.logo;
 
     var elDate = document.getElementById("f-date"),
         elTime = document.getElementById("f-time"),

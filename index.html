@@ -1,14 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0; url=landing.html">
-  <link rel="canonical" href="landing.html">
-  <title>Gion Asakura | 祇園あさくら — Italian Restaurant, Kyoto</title>
-  <script>window.location.replace('landing.html');</script>
+  <title>Gion Asakura | 祇園あさくら</title>
+  <link rel="canonical" href="en/index.html">
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=en/index.html">
+  </noscript>
+  <style>
+    html, body { width: 100%; height: 100%; margin: 0; }
+    body { overflow: hidden; background: #1a1816; }
+    .splash {
+      width: 100%; height: 100%;
+      background:
+        linear-gradient(180deg, rgba(15, 14, 13, 0.35), rgba(15, 14, 13, 0.55)),
+        url("./assets/images/hero.webp") center / cover no-repeat;
+      opacity: 0;
+      animation: fadeIn 420ms ease forwards;
+    }
+    @keyframes fadeIn { to { opacity: 1; } }
+  </style>
 </head>
 <body>
-  <p>Redirecting to <a href="landing.html">Gion Asakura</a>&hellip;</p>
+  <div class="splash" aria-hidden="true"></div>
+  <script>
+    window.setTimeout(function () {
+      window.location.replace("en/index.html");
+    }, 420);
+  </script>
 </body>
 </html>

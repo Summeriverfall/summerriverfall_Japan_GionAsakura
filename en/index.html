@@ -3,164 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Gion Asakura — an intimate Italian restaurant in Higashiyama, Kyoto, near Gion. Handmade pasta and seasonal Italian plates. Dinner from 17:30, reservations recommended.">
-  <title>Gion Asakura | Italian Restaurant in Gion, Kyoto</title>
+  <title>Gion Asakura · Italian Restaurant in Gion, Kyoto</title>
+  <meta name="description" content="Gion Asakura — an intimate Italian restaurant in Higashiyama, Kyoto, near Gion. Handmade pasta and seasonal Italian plates. Dinner from 17:30.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <header class="header" id="header">
-    <nav class="nav">
-      <a href="../landing.html" class="logo">
-        <span class="logo-main">Gion Asakura</span>
-        <span class="logo-sub">Italian · Kyoto</span>
-      </a>
-      <ul class="nav-menu">
-        <li><a href="#concept">Concept</a></li>
-        <li><a href="#menu">Menu</a></li>
+  <header class="site-header is-hero-light">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Gion Asakura</a>
+      <button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav">
+        <li><a href="#products">Menu</a></li>
         <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#visit">Access</a></li>
-        <li class="lang-links"><a class="active">EN</a><span>/</span><a href="../jp/index.html">日本語</a><span>/</span><a href="../cn/index.html">中文</a></li>
-        <li><a href="../booking.html?lang=en" class="nav-cta">Reserve</a></li>
+        <li><a href="#location">Location</a></li>
+        <li class="lang"><a href="../cn/index.html">中文</a><span>&middot;</span><a href="../jp/index.html">JP</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-bg" style="background-image:url('../assets/images/hero-1.webp')"></div>
+  <section class="hero" style="background-image: url('../assets/images/hero.webp');">
     <div class="hero-inner">
-      <span class="eyebrow">Italian Kitchen · Gion, Kyoto</span>
+      <p class="hero-kicker">Italian Cuisine &amp; Wine · Gion, Kyoto</p>
       <h1>Gion Asakura</h1>
-      <span class="jp-name">祇園あさくら</span>
-      <p class="hero-tag">Handmade pasta and seasonal Italian plates, served with the quiet restraint of Kyoto.</p>
-      <div class="hero-actions">
-        <a href="../booking.html?lang=en" class="btn btn-primary">Reserve a table</a>
-        <a href="#menu" class="btn btn-ghost">View menu</a>
-      </div>
-      <div class="hero-meta">
-        <span><i class="fa">◆</i> Italian cuisine</span>
-        <span><i class="fa">◆</i> Higashiyama, Kyoto</span>
-        <span><i class="fa">◆</i> Dinner from 17:30</span>
+      <p class="hero-lead">Handmade pasta and seasonal Italian plates, served with the quiet restraint of Kyoto. Dinner from 17:30.</p>
+      <div class="hero-cta">
+        <button type="button" class="btn btn--light js-booking-trigger">booking</button>
       </div>
     </div>
   </section>
 
-  <section class="section" id="concept">
-    <div class="wrap">
-      <div class="concept-grid">
-        <div class="concept-copy reveal">
-          <span class="eyebrow">The Table</span>
-          <div class="section-head" style="margin-bottom:24px"><h2>A small Italian kitchen<br>in the heart of Higashiyama</h2></div>
-          <p>A few quiet steps from Gion, Gion Asakura is an intimate restaurant where Italian technique meets Japanese produce. Handmade pastas and seasonal plates are cooked simply and finished with the restraint of Kyoto.</p>
-          <p>The room is small and the pace unhurried — an evening here is meant to be lingered over, course by course, glass by glass.</p>
-          <p class="sig">Buonasera, and welcome to Gion.</p>
-        </div>
-        <div class="concept-media reveal">
-          <img src="../assets/images/dish-06.webp" alt="Seasonal plated dish at Gion Asakura">
-          <span class="frame"></span>
-        </div>
-      </div>
+  <div class="band">
+    <div class="band__media" style="background-image: url('../assets/images/dishes-spread.webp');" role="img" aria-label="Seasonal Italian dishes"></div>
+    <div class="band__text">
+      <p class="section-label">Concept</p>
+      <h2>A small Italian kitchen in Higashiyama</h2>
+      <p>A few quiet steps from Gion, Gion Asakura is an intimate counter restaurant where Italian technique meets Japanese produce. The room is small and the pace unhurried — linger course by course, glass by glass.</p>
     </div>
-  </section>
+  </div>
 
-  <section class="section bg-2" id="menu">
-    <div class="wrap">
-      <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
-        <span class="eyebrow">Menu</span>
-        <h2>Pasta</h2>
-        <p class="muted">Handmade and cooked to order. Prices include tax.</p>
+  <section id="products" class="section section--tight-top">
+    <div class="container">
+      <p class="section-label">Menu</p>
+      <h2>Pasta &amp; Plates</h2>
+      <p class="section-intro">Handmade pasta cooked to order, plus antipasti and seasonal mains. Prices include tax.</p>
+      <div class="editorial-list">
+        <article class="editorial-item">
+          <div class="editorial-media">
+            <img src="../assets/images/dishes-spread.webp" alt="Seasonal pasta and Italian plates">
+          </div>
+          <div class="editorial-copy">
+            <p class="editorial-kicker">Signature</p>
+            <h3>Pasta · Handmade</h3>
+            <p>From peperoncino to sea urchin cream — cooked simply, finished with Kyoto restraint.</p>
+            <div class="editorial-thumbs">
+              <img src="../assets/images/antipasti.webp" alt="Antipasti detail">
+              <img src="../assets/images/food-collage.webp" alt="Kitchen plates">
+              <img src="../assets/images/interior-setting.webp" alt="Counter setting">
+            </div>
+          </div>
+        </article>
+
+        <article class="editorial-item editorial-item--reverse">
+          <div class="editorial-media">
+            <img src="../assets/images/antipasti.webp" alt="Antipasti platter">
+          </div>
+          <div class="editorial-copy">
+            <p class="editorial-kicker">À la carte</p>
+            <h3>Antipasti · Meat &amp; Fish</h3>
+            <p>Small plates, grilled vegetables, and seasonal meat or fish — ask our staff for the full board.</p>
+            <div class="editorial-thumbs">
+              <img src="../assets/images/window-noren.webp" alt="Wine &amp; Italian cuisine">
+              <img src="../assets/images/exterior-entrance.webp" alt="Storefront">
+              <img src="../assets/images/interior-counter.webp" alt="Open kitchen">
+            </div>
+          </div>
+        </article>
       </div>
-      <div class="menu-wrap reveal">
-        <div class="menu-item"><div class="mi-name">Peperoncino with Japanese garlic<small>国産にんにくのペペロンチーノ</small></div><span class="mi-dots"></span><span class="mi-price">¥1,200</span></div>
-        <div class="menu-item"><div class="mi-name">Chilled tomato &amp; basil<small>高糖度トマトとバジルの冷製</small></div><span class="mi-dots"></span><span class="mi-price">¥2,000</span></div>
-        <div class="menu-item"><div class="mi-name">Spicy tomato Arrabbiata<small>ピリ辛トマトソースのアラビアータ</small></div><span class="mi-dots"></span><span class="mi-price">¥2,000</span></div>
-        <div class="menu-item"><div class="mi-name">Tomato &amp; basil sauce<small>高糖度トマトとバジルのソース</small></div><span class="mi-dots"></span><span class="mi-price">¥2,000</span></div>
-        <div class="menu-item"><div class="mi-name">Buffalo mozzarella &amp; tomato<small>水牛モッツァレラチーズとトマト</small></div><span class="mi-dots"></span><span class="mi-price">¥2,500</span></div>
-        <div class="menu-item"><div class="mi-name">Amatriciana — sausage, tomato &amp; onion<small>ソーセージ、トマト、オニオンのアマトリチャーナ</small></div><span class="mi-dots"></span><span class="mi-price">¥2,500</span></div>
-        <div class="menu-item"><div class="mi-name">Spicy mentaiko &amp; shrimp<small>辛子明太子と海老</small></div><span class="mi-dots"></span><span class="mi-price">¥2,160</span></div>
-        <div class="menu-item"><div class="mi-name">Shrimp &amp; broccoli, tomato cream<small>海老とブロッコリーのトマトクリームソース</small></div><span class="mi-dots"></span><span class="mi-price">¥2,800</span></div>
-        <div class="menu-item"><div class="mi-name">Gorgonzola<small>ゴルゴンゾーラソース</small></div><span class="mi-dots"></span><span class="mi-price">¥2,500</span></div>
-        <div class="menu-item"><div class="mi-name">Rich sea urchin cream pasta<small>たっぷりウニのクリームパスタ</small></div><span class="mi-dots"></span><span class="mi-price">¥5,900</span></div>
+
+      <div class="menu-list">
+        <div class="menu-row"><div class="menu-row__name">Peperoncino with Japanese garlic<small>国産にんにくのペペロンチーノ</small></div><span class="menu-row__price">¥1,200</span></div>
+        <div class="menu-row"><div class="menu-row__name">Chilled tomato &amp; basil<small>高糖度トマトとバジルの冷製</small></div><span class="menu-row__price">¥2,000</span></div>
+        <div class="menu-row"><div class="menu-row__name">Spicy tomato Arrabbiata<small>ピリ辛トマトソースのアラビアータ</small></div><span class="menu-row__price">¥2,000</span></div>
+        <div class="menu-row"><div class="menu-row__name">Tomato &amp; basil sauce<small>高糖度トマトとバジルのソース</small></div><span class="menu-row__price">¥2,000</span></div>
+        <div class="menu-row"><div class="menu-row__name">Buffalo mozzarella &amp; tomato<small>水牛モッツァレラチーズとトマト</small></div><span class="menu-row__price">¥2,500</span></div>
+        <div class="menu-row"><div class="menu-row__name">Amatriciana — sausage, tomato &amp; onion<small>ソーセージ、トマト、オニオンのアマトリチャーナ</small></div><span class="menu-row__price">¥2,500</span></div>
+        <div class="menu-row"><div class="menu-row__name">Spicy mentaiko &amp; shrimp<small>辛子明太子と海老</small></div><span class="menu-row__price">¥2,160</span></div>
+        <div class="menu-row"><div class="menu-row__name">Shrimp &amp; broccoli, tomato cream<small>海老とブロッコリーのトマトクリームソース</small></div><span class="menu-row__price">¥2,800</span></div>
+        <div class="menu-row"><div class="menu-row__name">Gorgonzola<small>ゴルゴンゾーラソース</small></div><span class="menu-row__price">¥2,500</span></div>
+        <div class="menu-row"><div class="menu-row__name">Rich sea urchin cream pasta<small>たっぷりウニのクリームパスタ</small></div><span class="menu-row__price">¥5,900</span></div>
       </div>
       <p class="menu-note">Antipasti, meat &amp; fish dishes and dolci are also served — please ask our staff for the full à la carte.</p>
-    </div>
-  </section>
 
-  <section class="section" id="gallery">
-    <div class="wrap">
-      <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
-        <span class="eyebrow">Gallery</span>
-        <h2>From the kitchen</h2>
-      </div>
-      <div class="gallery reveal">
-        <a href="../assets/images/hero-1.webp" class="tall"><img src="../assets/images/hero-1.webp" alt="Pasta amatriciana"></a>
-        <a href="../assets/images/dish-01.webp"><img src="../assets/images/dish-01.webp" alt="Beef with grilled asparagus"></a>
-        <a href="../assets/images/dish-02.webp"><img src="../assets/images/dish-02.webp" alt="Tomato bruschetta"></a>
-        <a href="../assets/images/dish-03.webp"><img src="../assets/images/dish-03.webp" alt="Salmon crudo"></a>
-        <a href="../assets/images/dish-04.webp"><img src="../assets/images/dish-04.webp" alt="Cacio e pepe"></a>
-        <a href="../assets/images/dish-07.webp"><img src="../assets/images/dish-07.webp" alt="Grilled cheese and white asparagus"></a>
-        <a href="../assets/images/dish-08.webp"><img src="../assets/images/dish-08.webp" alt="Fritto"></a>
-        <a href="../assets/images/dish-09.webp"><img src="../assets/images/dish-09.webp" alt="Fish tataki"></a>
-        <a href="../assets/images/dish-05.webp"><img src="../assets/images/dish-05.webp" alt="Prosciutto plate"></a>
-        <a href="../assets/images/dish-11.webp"><img src="../assets/images/dish-11.webp" alt="Escargot"></a>
-        <a href="../assets/images/dish-10.webp"><img src="../assets/images/dish-10.webp" alt="Croquette"></a>
-        <a href="../assets/images/hero-2.webp"><img src="../assets/images/hero-2.webp" alt="Menchi katsu with cream"></a>
+      <div class="products-cta">
+        <button type="button" class="btn btn--dark js-booking-trigger">booking</button>
       </div>
     </div>
   </section>
 
-  <section class="section bg-2" id="visit">
-    <div class="wrap">
-      <div class="visit-grid">
-        <div class="visit-info reveal">
-          <span class="eyebrow">Access</span>
-          <h2>Visit us in Gion</h2>
-          <div class="visit-item">
-            <h4>Address</h4>
-            <p><a href="https://www.google.com/maps?cid=3698002281516441157" target="_blank" rel="noopener noreferrer">317 Furunishicho, Higashiyama Ward,<br>Kyoto 605-0065, Japan</a></p>
-          </div>
-          <div class="visit-item">
-            <h4>Hours</h4>
+  <section id="gallery" class="section">
+    <div class="container">
+      <p class="section-label">Space</p>
+      <h2>Interior &amp; Alley</h2>
+      <p class="section-intro">An intimate counter facing the open kitchen, tucked along a quiet Higashiyama alley near Gion.</p>
+      <div class="space-story">
+        <div class="space-main">
+          <img src="../assets/images/interior-counter.webp" alt="Counter seating and open kitchen">
+        </div>
+        <div class="space-copy">
+          <p>Warm wood, focused lighting, and a chef&rsquo;s counter — evenings here are meant to be lingered over.</p>
+          <p>Find us down the narrow alley marked 「祇園あさくら」, just a few steps from Gion.</p>
+        </div>
+        <div class="space-strip">
+          <img src="../assets/images/exterior-entrance.webp" alt="Storefront entrance">
+          <img src="../assets/images/alley-sign.webp" alt="Alley directory with Gion Asakura">
+          <img src="../assets/images/window-noren.webp" alt="Wine glass noren">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="location" class="section">
+    <div class="container">
+      <p class="section-label">Visit</p>
+      <h2>Location</h2>
+      <p class="section-intro">Higashiyama, Kyoto · Reservations recommended.</p>
+      <div class="location-wrap">
+        <div class="location-info">
+          <h3>Gion Asakura</h3>
+          <p class="address">317 Furunishicho, Higashiyama Ward, Kyoto 605-0065, Japan</p>
+          <div class="hours-block">
+            <p><strong>Hours</strong></p>
             <p>Dinner from 17:30 · Reservations recommended</p>
           </div>
-          <div class="visit-item">
-            <h4>Phone</h4>
-            <p><a href="tel:+81755613828">+81 75-561-3828</a></p>
+          <p class="phone"><strong>Tel:</strong> <a href="tel:+81755613828">075-561-3828</a></p>
+          <div class="tags">
+            <span class="tag">Dine-in</span>
+            <span class="tag">Takeaway</span>
+            <span class="tag">Delivery</span>
           </div>
-          <div class="visit-item">
-            <h4>Service</h4>
-            <p>Dine-in · Takeout · Delivery</p>
-          </div>
-          <div class="visit-actions">
-            <a href="../booking.html?lang=en" class="btn btn-primary">Reserve a table</a>
-            <a href="https://www.google.com/maps?cid=3698002281516441157" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Open in Google Maps</a>
+          <div class="location-actions">
+            <a href="https://www.google.com/maps?cid=3698002281516441157" target="_blank" rel="noopener noreferrer" class="btn btn--dark">Google Maps</a>
+            <button type="button" class="btn btn--dark js-booking-trigger">booking</button>
           </div>
         </div>
-        <div class="visit-map reveal">
-          <iframe title="Gion Asakura map" src="https://maps.google.com/maps?q=Gion%20Asakura&ftid=0x600108c224c5f195:0x3351f17b705f1e45&z=17&output=embed" style="border:0;pointer-events:none;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <a href="https://www.google.com/maps?cid=3698002281516441157" target="_blank" rel="noopener noreferrer" class="visit-map-link" aria-label="Open Gion Asakura in Google Maps" style="position:absolute;inset:0;z-index:2;"></a>
+        <div class="map-container">
+          <iframe title="Gion Asakura map" src="https://maps.google.com/maps?q=Gion%20Asakura&ftid=0x600108c224c5f195:0x3351f17b705f1e45&z=17&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer-in">
-        <div class="f-name">Gion Asakura<small>Italian · Kyoto</small></div>
-        <div class="footer-links">
-          <a href="#concept">Concept</a>
-          <a href="#menu">Menu</a>
-          <a href="#visit">Access</a>
-          <a href="../booking.html?lang=en">Reserve</a>
-        </div>
-      </div>
-      <p class="footer-copy">© 2026 Gion Asakura · 317 Furunishicho, Higashiyama Ward, Kyoto · Powered by <a href="https://reserveinjp.com/" target="_blank" rel="noopener">reserveinjp.</a></p>
-    </div>
+  <footer class="site-footer">
+    <p>&copy; Gion Asakura 祇園あさくら &middot; <a href="../cn/index.html">中文</a> / <a href="../jp/index.html">日本語</a></p>
+    <p class="powered-by"><a href="https://reserveinjp.com/" target="_blank" rel="noopener noreferrer" aria-label="reserveinjp">powered by reserveinjp</a></p>
   </footer>
+
+  <div id="booking-modal" class="booking-modal" hidden>
+    <div class="booking-modal__backdrop" data-booking-close></div>
+    <div class="booking-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+      <button type="button" class="booking-modal__close" aria-label="Close booking popup" data-booking-close>&times;</button>
+      <h3 id="booking-modal-title">booking</h3>
+      <div class="booking-modal__actions">
+        <a href="../booking.html?lang=en">Online Booking Form</a>
+        <a href="https://api.whatsapp.com/send/?phone=85290744644&text=Hi%20I%27d%20like%20to%20book%20Gion%20Asakura%20%2F%20%E7%A5%87%E5%9C%92%E3%81%82%E3%81%95%E3%81%8F%E3%82%89.%20We%20have%20__%20people%20and%20would%20like%20to%20book%20on%20__%20(date)%20at%20__%20(time)." target="_blank" rel="noopener noreferrer">WhatsApp Booking</a>
+        <a href="tel:+81755613828">Phone Booking</a>
+      </div>
+    </div>
+  </div>
 
   <script src="../script.js"></script>
 </body>
