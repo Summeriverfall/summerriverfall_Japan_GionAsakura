@@ -51,7 +51,7 @@
 
 (function () {
   const revealTargets = document.querySelectorAll(
-    ".band__text, .section .section-label, .section h2, .section .section-intro, .editorial-item, .space-main, .space-copy, .space-strip img, .location-wrap, .products-cta"
+    ".band__text, .section .section-label, .section h2, .section .section-intro, .omakase-block, .media-carousel, .space-intro-copy, .review-card, .location-wrap, .products-cta"
   );
 
   if (!revealTargets.length) return;
@@ -188,5 +188,87 @@
 
     render();
     startAuto();
+  });
+})();
+
+(function () {
+  const carousels = document.querySelectorAll("[data-carousel]");
+  if (!carousels.length) return;
+
+  carousels.forEach(function (root) {
+    const track = root.querySelector("[data-carousel-track]");
+    const slides = root.querySelectorAll(".carousel-slide");
+    const prevBtn = root.querySelector("[data-carousel-prev]");
+    const nextBtn = root.querySelector("[data-carousel-next]");
+    const dotsWrap = root.querySelector("[data-carousel-dots]");
+    if (!track || slides.length < 2) return;
+
+    let index = 0;
+    let timer = null;
+    const autoMs = 4200;
+
+    function render() {
+      track.style.transform = "translateX(-" + index * 100 + "%)";
+      if (!dotsWrap) return;
+      dotsWrap.querySelectorAll(".carousel-dot").forEach(function (dot, i) {
+        dot.classList.toggle("active", i === index);
+      });
+    }
+
+    function go(i) {
+      index = (i + slides.length) % slides.length;
+      render();
+    }
+
+    function next() {
+      go(index + 1);
+    }
+
+    function start() {
+      stop();
+      timer = window.setInterval(next, autoMs);
+    }
+
+    function stop() {
+      if (timer !== null) {
+        window.clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    if (dotsWrap) {
+      slides.forEach(function (_, i) {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "carousel-dot" + (i === 0 ? " active" : "");
+        dot.setAttribute("aria-label", "Slide " + (i + 1));
+        dot.addEventListener("click", function () {
+          go(i);
+          start();
+        });
+        dotsWrap.appendChild(dot);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        go(index - 1);
+        start();
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        next();
+        start();
+      });
+    }
+
+    root.addEventListener("mouseenter", stop);
+    root.addEventListener("mouseleave", start);
+    root.addEventListener("focusin", stop);
+    root.addEventListener("focusout", start);
+
+    render();
+    start();
   });
 })();

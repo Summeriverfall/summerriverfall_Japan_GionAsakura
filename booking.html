@@ -42,9 +42,8 @@
         <div class="field">
           <label data-i18n="guests">Guests</label>
           <select id="f-guests">
-            <option>1</option><option>2</option><option>3</option><option>4</option>
-            <option>5</option><option>6</option><option>7</option><option>8</option>
-            <option data-i18n="guests8">8+ (please note below)</option>
+            <option>1</option><option selected>2</option><option>3</option><option>4</option>
+            <option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>
           </select>
         </div>
         <div class="field">
@@ -62,7 +61,7 @@
       <button type="button" class="btn btn--dark" id="submit" style="width:100%">
         <span data-i18n="submit">Send via WhatsApp</span>
       </button>
-      <p class="menu-note" data-i18n="foot">Times are requests and subject to confirmation. For same-day reservations please call +81 75-561-3828.</p>
+      <p class="menu-note" data-i18n="foot">Omakase ¥15,000 / guest (tax included; drinks separate). Fully reservation-based — please book at least one day ahead. Tel +81 75-561-3828.</p>
     </div>
   </main>
 
@@ -75,26 +74,26 @@
 
     var I18N = {
       en: { back:"Back", eyebrow:"Reservation", title:"Reserve a table",
-        intro:"Send us your request via WhatsApp — we'll confirm availability and get back to you.",
-        date:"Date", time:"Time", guests:"Guests", guests8:"8+ (please note below)",
-        name:"Name", notes:"Notes (seating, allergies, occasion…)", submit:"Send via WhatsApp",
-        foot:"Times are requests and subject to confirmation. For same-day reservations please call +81 75-561-3828.",
+        intro:"Omakase only · ¥15,000 per guest (tax included; drinks separate). Send your request via WhatsApp — please book at least one day ahead.",
+        date:"Date", time:"Time", guests:"Guests",
+        name:"Name", notes:"Notes (private booking for 6–9, allergies, occasion…)", submit:"Send via WhatsApp",
+        foot:"Omakase ¥15,000 / guest (tax included; drinks separate). Fully reservation-based — please book at least one day ahead. Tel +81 75-561-3828.",
         sumTitle:"Your request", sDate:"Date", sTime:"Time", sGuests:"Guests", sName:"Name", sNotes:"Notes", none:"—",
-        msgHead:"Reservation request — Gion Asakura", htmlLang:"en", logo:"Gion Asakura" },
+        msgHead:"Reservation request — Gion Asakura (Omakase)", htmlLang:"en", logo:"Gion Asakura" },
       jp: { back:"戻る", eyebrow:"ご予約", title:"ご予約",
-        intro:"WhatsApp で予約リクエストをお送りください。空席を確認のうえご連絡いたします。",
-        date:"ご希望日", time:"ご希望時間", guests:"人数", guests8:"8名以上（下記にご記入ください）",
-        name:"お名前", notes:"ご要望（席・アレルギー・記念日など）", submit:"WhatsApp で送信",
-        foot:"時間はリクエストとなり、確定は別途ご連絡いたします。当日のご予約はお電話（075-561-3828）にてお願いします。",
+        intro:"お任せコースのみ · お一人様 ¥15,000（税込・ドリンク別）。WhatsApp でリクエストをお送りください。少なくとも前日までのご予約をお願いします。",
+        date:"ご希望日", time:"ご希望時間", guests:"人数",
+        name:"お名前", notes:"ご要望（6〜9名貸切・アレルギー・記念日など）", submit:"WhatsApp で送信",
+        foot:"お任せコース ¥15,000／お一人様（税込・ドリンク別）。完全予約制のため、少なくとも前日までのご予約をお願いします。Tel 075-561-3828。",
         sumTitle:"ご予約内容", sDate:"ご希望日", sTime:"ご希望時間", sGuests:"人数", sName:"お名前", sNotes:"ご要望", none:"—",
-        msgHead:"予約リクエスト — 祇園あさくら", htmlLang:"ja", logo:"祇園あさくら" },
+        msgHead:"予約リクエスト — 祇園あさくら（おまかせコース）", htmlLang:"ja", logo:"祇園あさくら" },
       cn: { back:"返回", eyebrow:"预约", title:"预约餐位",
-        intro:"通过 WhatsApp 发送预约请求，我们将确认空位后尽快回复您。",
-        date:"日期", time:"时间", guests:"人数", guests8:"8 人以上（请在下方备注）",
-        name:"姓名", notes:"备注（座位、过敏、纪念日等）", submit:"通过 WhatsApp 发送",
-        foot:"所填时间为预约请求，最终以本店确认为准。当日预约请致电 +81 75-561-3828。",
+        intro:"仅提供主厨全权安排（Omakase）套餐 · 每位 ¥15,000（含税，饮品另计）。通过 WhatsApp 发送请求，请至少提前一天预约。",
+        date:"日期", time:"时间", guests:"人数",
+        name:"姓名", notes:"备注（6–9 人包场、过敏、纪念日等）", submit:"通过 WhatsApp 发送",
+        foot:"Omakase 每位 ¥15,000（含税，饮品另计）。完全预约制，请至少提前一天预约。电话 +81 75-561-3828。",
         sumTitle:"预约内容", sDate:"日期", sTime:"时间", sGuests:"人数", sName:"姓名", sNotes:"备注", none:"—",
-        msgHead:"预约请求 — 祇園あさくら", htmlLang:"zh-CN", logo:"祇園あさくら" }
+        msgHead:"预约请求 — 祇園あさくら（Omakase）", htmlLang:"zh-CN", logo:"祇園あさくら" }
     };
     var t = I18N[lang];
 
